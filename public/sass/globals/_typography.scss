@@ -1,0 +1,113 @@
+@font-face {
+	font-family: "LarkenMedium";
+	src:
+		url("webFonts/LarkenMedium/font.woff2") format("woff2"),
+		url("webFonts/LarkenMedium/font.woff") format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "LarkenRegular";
+	src:
+		url("webFonts/LarkenRegular/font.woff2") format("woff2"),
+		url("webFonts/LarkenRegular/font.woff") format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "LarkenMediumItalic";
+	src:
+		url("webFonts/LarkenMediumItalic/font.woff2") format("woff2"),
+		url("webFonts/LarkenMediumItalic/font.woff") format("woff");
+	font-display: swap;
+}
+
+@import url("https://use.typekit.net/jmx2ohi.css");
+
+%paragraph {
+	font-family: $font-secondary;
+	font-size: 21px;
+	line-height: 29px;
+	font-weight: 400;
+	margin-bottom: 30px;
+
+	@include desktop-xl {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	@include desktop-lg {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	@include tablet {
+		font-size: 16px;
+		line-height: 22px;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 30px;
+	margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-primary;
+}
+
+body p {
+	@extend %paragraph;
+}
+
+body li {
+	@extend %paragraph;
+}
+
+body span {
+	font-family: $font-secondary;
+}
+
+a {
+	transition: all 0.3s ease-in;
+
+	&:hover {
+		transition: all 0.3s ease-in;
+	}
+}
+
+h1 {
+	font-size: 100px;
+	font-weight: 500;
+	line-height: 100px;
+
+	@include desktop-xl {
+		font-size: 85px;
+		line-height: 85px;
+	}
+
+	@include desktop-lg {
+		font-size: 75px;
+		line-height: 75px;
+	}
+
+	@include tablet {
+		font-size: 52px;
+		line-height: 52px;
+	}
+
+	@include mobo-lg {
+		font-size: 40px;
+		line-height: 48px;
+	}
+}

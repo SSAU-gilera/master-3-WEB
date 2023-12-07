@@ -1,0 +1,35 @@
+.container {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+	max-width: 1654px;
+
+	@include desktop-xxl {
+		max-width: 1390px;
+	}
+
+	@include desktop-xl {
+		max-width: 1150px;
+	}
+
+	@include desktop-lg {
+		max-width: 942px;
+	}
+
+	@include desktop-sm {
+		max-width: 718px;
+	}
+
+	@include tablet {
+		max-width: 600px;
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+
+	@include mobo-lg {
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+}
