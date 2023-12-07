@@ -1,31 +1,7 @@
-@font-face {
-	font-family: "LarkenMedium";
-	src:
-		url("webFonts/LarkenMedium/font.woff2") format("woff2"),
-		url("webFonts/LarkenMedium/font.woff") format("woff");
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "LarkenRegular";
-	src:
-		url("webFonts/LarkenRegular/font.woff2") format("woff2"),
-		url("webFonts/LarkenRegular/font.woff") format("woff");
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "LarkenMediumItalic";
-	src:
-		url("webFonts/LarkenMediumItalic/font.woff2") format("woff2"),
-		url("webFonts/LarkenMediumItalic/font.woff") format("woff");
-	font-display: swap;
-}
-
 @import url("https://use.typekit.net/jmx2ohi.css");
 
 %paragraph {
-	font-family: $font-secondary;
+	font-family: $font;
 	font-size: 21px;
 	line-height: 29px;
 	font-weight: 400;
@@ -63,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font-primary;
+	font-family: $font;
 }
 
 body p {
@@ -75,7 +51,7 @@ body li {
 }
 
 body span {
-	font-family: $font-secondary;
+	font-family: $font;
 }
 
 a {
