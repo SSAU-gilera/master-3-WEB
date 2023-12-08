@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="public/css/style.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 	<script src="https://kit.fontawesome.com/1d638b5869.js" crossorigin="anonymous"></script>
 </head>
@@ -45,12 +45,33 @@
 			<!-- <div><img src="/public/imgs/gallery-11.jpg" alt="Image 11"></div> -->
 			<div><img src="/public/imgs/gallery-12.jpg" alt="Image 12"></div>
 		</div>
-		<div class="home__quote">
+		<div class="home__contact">
+			<h2>Свяжитесь со мной</h2>
 			<p>Давайте <span>создадим</span> вместе великолепные кадры, которые будут переливаться эмоциями и оставят
 				незабываемый след
-				в вашей жизни. Свяжитесь со мной, и давайте воплотим в жизнь вашу уникальную <span>историю</span> через
+				в вашей жизни. Давайте воплотим в жизнь вашу уникальную <span>историю</span> через
 				объектив моей
 				камеры.</p>
+			<form class="home__contact-form" id="contactForm">
+				<div class="home__contact-form__field">
+					<input type="text" id="firstName" placeholder="Имя*">
+				</div>
+				<div class="home__contact-form__field">
+					<input type="text" id="lastName" placeholder="Фамилия*">
+				</div>
+				<div class="home__contact-form__field">
+					<input type="email" id="email" placeholder="example@mail.ru*">
+				</div>
+				<div class="home__contact-form__field">
+					<input type="tel" id="phone" placeholder="+X(XXX)XX-XX-XXX">
+				</div>
+				<div class="home__contact-form__field">
+					<textarea id="message" placeholder="Сообщение*"></textarea>
+				</div>
+				<div class="home__contact-form__submit">
+					<button type="submit">Отправить</button>
+				</div>
+			</form>
 		</div>
 	</main>
 	<footer class="home__footer">
@@ -58,6 +79,8 @@
 		<a href="https://www.instagram.com/gi.lera"><i class="fa-brands fa-instagram"></i></a>
 		<a href="https://vk.com/gileraa"><i class="fa-brands fa-vk"></i></a>
 	</footer>
+
+	<script src="scripts.js"></script>
 </body>
 
 </html>

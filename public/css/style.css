@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://use.typekit.net/jmx2ohi.css");
 * {
   margin: 0;
@@ -576,7 +577,7 @@ h1 {
   color: #fff;
 }
 .home__header a:hover {
-  color: darkgrey;
+  color: #a2a2a2;
 }
 .home__header a i {
   height: 100%;
@@ -603,7 +604,7 @@ h1 {
           flex-direction: column;
 }
 .home__cover-title {
-  color: darkgrey;
+  color: #a2a2a2;
   max-width: 65%;
   padding: 20px;
 }
@@ -625,7 +626,7 @@ h1 {
   display: inline-block;
   font-size: 40px;
   line-height: 45px;
-  color: darkgrey;
+  color: #a2a2a2;
   text-transform: uppercase;
   white-space: nowrap;
   margin-bottom: 0;
@@ -668,25 +669,102 @@ h1 {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
-.home__quote {
+.home__contact {
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: calc(100vh - 250px);
+  height: 100vh;
 }
-.home__quote p {
+.home__contact h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.home__contact > p {
   max-width: 800px;
   text-align: center;
-  color: darkgrey;
+  color: #a2a2a2;
 }
-.home__quote p span {
+.home__contact > p span {
   color: #131313;
+}
+.home__contact-form {
+  width: 550px;
+}
+.home__contact-form__field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.home__contact-form__field input[type=text],
+.home__contact-form__field input[type=email],
+.home__contact-form__field input[type=tel],
+.home__contact-form__field textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  background-color: #f6f6f6;
+  font-family: "Unbounded", sans-serif;
+  font-size: 16px;
+}
+.home__contact-form__field input[type=text]:focus,
+.home__contact-form__field input[type=email]:focus,
+.home__contact-form__field input[type=tel]:focus,
+.home__contact-form__field textarea:focus {
+  background-color: #e7e7e7;
+}
+.home__contact-form__field input[type=text].error,
+.home__contact-form__field input[type=email].error,
+.home__contact-form__field input[type=tel].error,
+.home__contact-form__field textarea.error {
+  background-color: #fff2f2;
+}
+.home__contact-form__field:has(input.error)::after, .home__contact-form__field:has(textarea.error)::after {
+  content: "Поле обязательно для заполнения или заполненно неккоректно";
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: #d38888;
+}
+.home__contact-form__field textarea {
+  height: 150px;
+  resize: none;
+}
+.home__contact-form__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.home__contact-form__submit button {
+  width: auto;
+  font-family: "Unbounded", sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #131313;
+  border: 3px solid #131313;
+  color: #f6f6f6;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.home__contact-form__submit button:hover {
+  background-color: #f6f6f6;
+  color: #131313;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 .home__footer {
   height: 250px;
@@ -710,7 +788,7 @@ h1 {
   color: #fff;
 }
 .home__footer a:hover {
-  color: darkgrey;
+  color: #a2a2a2;
 }
 .home__footer a i {
   height: 100%;
