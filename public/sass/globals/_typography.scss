@@ -1,0 +1,89 @@
+@import url("https://use.typekit.net/jmx2ohi.css");
+
+%paragraph {
+	font-family: $font;
+	font-size: 21px;
+	line-height: 29px;
+	font-weight: 400;
+	margin-bottom: 30px;
+
+	@include desktop-xl {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	@include desktop-lg {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	@include tablet {
+		font-size: 16px;
+		line-height: 22px;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 30px;
+	margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font;
+}
+
+body p {
+	@extend %paragraph;
+}
+
+body li {
+	@extend %paragraph;
+}
+
+body span {
+	font-family: $font;
+}
+
+a {
+	transition: all 0.3s ease-in;
+
+	&:hover {
+		transition: all 0.3s ease-in;
+	}
+}
+
+h1 {
+	font-size: 100px;
+	font-weight: 500;
+	line-height: 100px;
+
+	@include desktop-xl {
+		font-size: 85px;
+		line-height: 85px;
+	}
+
+	@include desktop-lg {
+		font-size: 75px;
+		line-height: 75px;
+	}
+
+	@include tablet {
+		font-size: 52px;
+		line-height: 52px;
+	}
+
+	@include mobo-lg {
+		font-size: 40px;
+		line-height: 48px;
+	}
+}
