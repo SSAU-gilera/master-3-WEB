@@ -11,16 +11,26 @@ body {
 	overflow: hidden;
 }
 
-.output {
+h2 {
+	color: #007bff;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+h3 {
+	color: #0056b3;
+	margin-bottom: 10px;
+}
+
+.output,
+.button-container,
+#testResult {
 	margin: 20px 0;
 	padding: 10px;
 	border-radius: 8px;
 	background-color: #fff;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.button-container {
-	margin: 20px 0;
 }
 
 .color-button {
