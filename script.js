@@ -1,5 +1,5 @@
-const { range, Observable, fromEvent } = rxjs;
-const { filter, map, merge } = rxjs.operators;
+// const { range, Observable, fromEvent } = rxjs;
+// const { filter, map, merge } = rxjs.operators;
 
 // Задание 1
 function isPrime(num) {
@@ -8,8 +8,8 @@ function isPrime(num) {
 	return num > 1;
 }
 
-range(1, 100).pipe(
-	filter(isPrime)
+rxjs.range(1, 100).pipe(
+	rxjs.operators.filter(isPrime)
 ).subscribe(x => {
 	const primeContainer = document.getElementById('primeNumbers');
 	primeContainer.innerHTML += `${x}, `;
@@ -17,7 +17,7 @@ range(1, 100).pipe(
 
 // Задание 2
 const countdownContainer = document.getElementById('countdown');
-const countdown$ = new Observable(subscriber => {
+const countdown$ = new rxjs.Observable(subscriber => {
 	let counter = 5;
 	countdownContainer.innerHTML = counter;
 
@@ -33,7 +33,7 @@ const countdown$ = new Observable(subscriber => {
 });
 
 countdown$.subscribe({
-	next(x) { },
+	next() { }, // Убран параметр x, так как он не используется
 	error(err) {
 		countdownContainer.innerHTML = err;
 		setTimeout(() => {
@@ -52,13 +52,12 @@ function getRandomColor() {
 	return color;
 }
 
-const btn1$ = fromEvent(document.getElementById('btn1'), 'click');
-const btn2$ = fromEvent(document.getElementById('btn2'), 'click');
-const btn3$ = fromEvent(document.getElementById('btn3'), 'click');
+const btn1$ = rxjs.fromEvent(document.getElementById('btn1'), 'click');
+const btn2$ = rxjs.fromEvent(document.getElementById('btn2'), 'click');
+const btn3$ = rxjs.fromEvent(document.getElementById('btn3'), 'click');
 
-btn1$.pipe(
-	merge(btn2$, btn3$),
-	map(() => getRandomColor())
+rxjs.merge(btn1$, btn2$, btn3$).pipe(
+	rxjs.operators.map(() => getRandomColor())
 ).subscribe(color => {
 	document.body.style.backgroundColor = color;
 });
