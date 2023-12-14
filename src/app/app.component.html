@@ -1,0 +1,23 @@
+<div class="app-container">
+	<div class="app-container__content">
+		<ul class="animal-list">
+			<ng-container *ngFor="let animal of animals">
+				<li class="animal-list__item" [class.animal-list__item--selected]="selectedAnimal === animal"
+					(click)="onSelect(animal)">
+					{{ animal.type }}: {{ animal.name }}
+				</li>
+				<div *ngIf="selectedAnimal === animal" class="animal-details">
+					<p class="animal-details__info">Тип: {{ animal.type }}</p>
+					<p class="animal-details__info">Имя: {{ animal.name }}</p>
+					<p class="animal-details__info">Возраст: {{ animal.age }}</p>
+					<p class="animal-details__info">Порода: {{ animal.breed }}</p>
+					<p class="animal-details__info">Цвет: {{ animal.color }}</p>
+					<p class="animal-details__info">Дружелюбный: {{ animal.isFriendly ? 'Да' : 'Нет' }}</p>
+				</div>
+			</ng-container>
+		</ul>
+		<div class="sidebar">
+			<button (click)="toggleCats()">{{ showCats ? 'Скрыть котиков' : 'Показать котиков' }}</button>
+		</div>
+	</div>
+</div>
