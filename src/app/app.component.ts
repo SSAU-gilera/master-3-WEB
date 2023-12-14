@@ -1,14 +1,29 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Animal } from './animal';
+import { AnimalService } from './animal.service';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'WEB';
+	selectedAnimal: Animal | null = null;
+	showCats: boolean = true;
+
+	constructor(private animalService: AnimalService) { }
+
+	get animals(): Animal[] {
+		return this.showCats
+			? this.animalService.getAnimals()
+			: this.animalService.getAnimals().filter(animal => animal.type !== 'Cat');
+	}
+
+	onSelect(animal: Animal): void {
+		this.selectedAnimal = this.selectedAnimal === animal ? null : animal;
+	}
+
+	toggleCats(): void {
+		this.showCats = !this.showCats;
+	}
 }
